@@ -10,5 +10,7 @@ secretGenerator:
 
 resources:
   - credentials.yml
-  - service.yml
   - deployment.yml
+  - rolebinding.yml
+  - route.yml
+  - service.yml

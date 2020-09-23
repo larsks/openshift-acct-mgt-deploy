@@ -12,18 +12,3 @@ spec:
   selector:
     app: acct-mgt
   type: ClusterIP
----
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: acct-mgt
-spec:
-  port:
-    targetPort: 8080-8080
-  tls:
-    termination: edge
-  to:
-    kind: Service
-    name: acct-mgt
-    weight: 100
-  wildcardPolicy: None

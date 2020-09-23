@@ -8,5 +8,5 @@ spec:
     spec:
       containers:
         - name: acct-mgt
-          image: larsks/acct-mgt:bddd47a7833d61ad011638c13cf17d901be33083
-          imagePullPolicy: IfNotPResent
+          image: larsks/acct-mgt:be985a61a406b8cdce5d8c840bfc248c1c4abbef
+          imagePullPolicy: IfNotPresent

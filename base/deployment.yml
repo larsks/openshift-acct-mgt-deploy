@@ -24,6 +24,12 @@ spec:
             - mountPath: /app/auth
               name: admin-pass
               readOnly: true
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 8080
+            initialDelaySeconds: 3
+            periodSeconds: 3
       volumes:
         - name: admin-pass
           secret:

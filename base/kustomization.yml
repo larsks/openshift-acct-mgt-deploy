@@ -1,0 +1,14 @@
+---
+namespace: lars-test-project
+commonLabels:
+  app: acct-mgt
+
+secretGenerator:
+  - name: acct-mgt-auth
+    env: acct-mgt-auth.conf
+    type: Opaque
+
+resources:
+  - credentials.yml
+  - service.yml
+  - deployment.yml

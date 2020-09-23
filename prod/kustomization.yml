@@ -1,0 +1,6 @@
+---
+bases:
+  - ../base
+
+patchesStrategicMerge:
+  - use_tagged_image.yml

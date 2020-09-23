@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acct-mgt-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acct-mgt
+  template:
+    metadata:
+      labels: {}
+    spec:
+      serviceAccountName: acct-mgt-sa
+      automountServiceAccountToken: true
+      containers:
+        - name: acct-mgt
+          image: larsks/acct-mgt:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - mountPath: /app/auth
+              name: admin-pass
+              readOnly: true
+      volumes:
+        - name: admin-pass
+          secret:
+            secretName: acct-mgt-auth

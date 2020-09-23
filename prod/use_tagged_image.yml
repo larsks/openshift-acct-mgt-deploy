@@ -1,0 +1,12 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acct-mgt-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: acct-mgt
+          image: larsks/acct-mgt:bddd47a7833d61ad011638c13cf17d901be33083
+          imagePullPolicy: IfNotPResent

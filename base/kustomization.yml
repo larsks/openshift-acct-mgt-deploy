@@ -1,5 +1,5 @@
 ---
-namespace: lars-test-project
+namespace: lars-acct-mgt
 commonLabels:
   app: acct-mgt
 
